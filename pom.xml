@@ -75,6 +75,7 @@
         <maven-pmd-plugin.version>3.8</maven-pmd-plugin.version>
         <p3c-pmd.version>2.1.1</p3c-pmd.version>
         <build-helper-maven-plugin.version>3.2.0</build-helper-maven-plugin.version>
+        <maven-build-helper.version>1.0</maven-build-helper.version>
         <directory-maven-plugin.version>0.3.1</directory-maven-plugin.version>
         <flyway-maven-plugin.version>6.0.6</flyway-maven-plugin.version>
         <jacoco.version>0.8.6</jacoco.version>
@@ -404,7 +405,7 @@
                     <dependency>
                         <groupId>cn.yusiwen</groupId>
                         <artifactId>maven-build-helper</artifactId>
-                        <version>1.0-SNAPSHOT</version>
+                        <version>${maven-build-helper.version}</version>
                     </dependency>
                 </dependencies>
                 <executions>
@@ -479,7 +480,7 @@
                     <dependency>
                         <groupId>cn.yusiwen</groupId>
                         <artifactId>maven-build-helper</artifactId>
-                        <version>1.0-SNAPSHOT</version>
+                        <version>${maven-build-helper.version}</version>
                     </dependency>
                 </dependencies>
                 <configuration>
@@ -708,7 +709,7 @@
                         <dependency>
                             <groupId>cn.yusiwen</groupId>
                             <artifactId>maven-build-helper</artifactId>
-                            <version>1.0-SNAPSHOT</version>
+                            <version>${maven-build-helper.version}</version>
                         </dependency>
                     </dependencies>
                     <configuration>
