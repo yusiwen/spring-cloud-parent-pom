@@ -14,8 +14,8 @@
     <description>Generic Parent POM for Spring Cloud Projects</description>
 
     <scm>
-        <connection>scm:git:ssh://git@github.com:yusiwen/spring-cloud-parent-pom.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:yusiwen/spring-cloud-parent-pom.git</developerConnection>
+        <connection>scm:git:ssh://git@github.com/yusiwen/spring-cloud-parent-pom.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/yusiwen/spring-cloud-parent-pom.git</developerConnection>
         <url>https://github.com/yusiwen/spring-cloud-parent-pom</url>
         <tag>HEAD</tag>
     </scm>
