@@ -651,13 +651,6 @@
                     <groupId>io.fabric8</groupId>
                     <artifactId>docker-maven-plugin</artifactId>
                     <version>${docker-maven-plugin.version}</version>
-                    <dependencies>
-                        <dependency>
-                            <groupId>cn.yusiwen</groupId>
-                            <artifactId>maven-build-helper</artifactId>
-                            <version>1.0-SNAPSHOT</version>
-                        </dependency>
-                    </dependencies>
                     <configuration>
                         <!--suppress UnresolvedMavenProperty -->
                         <skip>${docker.image.skip}</skip>
@@ -842,34 +835,7 @@
                                         <name>${project.groupId}.${project.artifactId}:${project.version}-dev</name>
                                         <build>
                                             <!--suppress UnresolvedMavenProperty -->
-                                            <dockerFile>Dockerfile-dev</dockerFile>
-                                        </build>
-                                    </image>
-                                </images>
-                            </configuration>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
-            </build>
-        </profile>
-        <profile>
-            <id>docker-prod</id>
-            <properties>
-                <docker.image.skip>false</docker.image.skip>
-            </properties>
-            <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <groupId>io.fabric8</groupId>
-                            <artifactId>docker-maven-plugin</artifactId>
-                            <configuration>
-                                <images>
-                                    <image>
-                                        <name>${project.groupId}.${project.artifactId}:${project.version}</name>
-                                        <build>
-                                            <!--suppress UnresolvedMavenProperty -->
-                                            <dockerFile>Dockerfile-prod</dockerFile>
+                                            <dockerFile>${docker.build.dockerfile}</dockerFile>
                                         </build>
                                     </image>
                                 </images>
