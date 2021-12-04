@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.yusiwen</groupId>
@@ -38,60 +39,57 @@
 
         <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
         <spring-boot.version>2.3.12.RELEASE</spring-boot.version>
-        <spring-cloud.alibaba.version>2.2.6.RELEASE</spring-cloud.alibaba.version>
-        <openfeign-dependencies.version>2.2.5.RELEASE</openfeign-dependencies.version>
+        <spring-cloud.alibaba.version>2.2.7.RELEASE</spring-cloud.alibaba.version>
+        <openfeign-dependencies.version>2.2.7.RELEASE</openfeign-dependencies.version>
         <spring-boot-admin.version>2.3.1</spring-boot-admin.version>
         <jasypt.version>3.0.4</jasypt.version>
         <nimbus.version>8.23</nimbus.version>
         <java.websocket.version>1.5.2</java.websocket.version>
 
-        <jetcache.version>2.5.16</jetcache.version>
-        <fastjson.version>1.2.76</fastjson.version>
-        <json-schema-validator.version>1.0.58</json-schema-validator.version>
+        <jetcache.version>2.6.0</jetcache.version>
+        <fastjson.version>1.2.78</fastjson.version>
+        <json-schema-validator.version>1.0.64</json-schema-validator.version>
 
         <mysql-connector.version>8.0.27</mysql-connector.version>
         <mybatis.version>3.5.7</mybatis.version>
-        <mybatis-plus.version>3.4.1</mybatis-plus.version>
-        <mybatis-plus-generator.version>3.4.1</mybatis-plus-generator.version>
+        <mybatis-plus.version>3.4.3.4</mybatis-plus.version>
+        <mybatis-plus-generator.version>3.5.1</mybatis-plus-generator.version>
         <freemarker.version>2.3.31</freemarker.version>
 
-        <hutool.version>5.7.4</hutool.version>
-        <lombok.version>1.18.20</lombok.version>
+        <hutool.version>5.7.16</hutool.version>
+        <lombok.version>1.18.22</lombok.version>
+        <swagger.version>3.0.0</swagger.version>
 
-        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version> <!-- 编译插件 -->
-        <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version> <!-- 资源文件处理插件 -->
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version> <!-- 编译插件 -->
+        <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version> <!-- 资源文件处理插件 -->
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+        <maven-release-plugin.version>3.0.0-M4</maven-release-plugin.version>
         <maven-war-plugin.version>3.2.2</maven-war-plugin.version> <!-- war打包插件 -->
         <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version> <!-- 依赖插件 -->
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version> <!-- clean插件 -->
         <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version> <!--checkstyle check插件 -->
-        <checkstyle.version>8.45</checkstyle.version>
+        <checkstyle.version>9.2</checkstyle.version>
         <maven-jxr-plugin.version>3.0.0</maven-jxr-plugin.version>
         <finbugs.version>3.0.1</finbugs.version>
-        <spotbugs-maven-plugin.version>4.3.0</spotbugs-maven-plugin.version> <!--findbugs check插件 -->
+        <spotbugs-maven-plugin.version>4.5.0.0</spotbugs-maven-plugin.version> <!--findbugs check插件 -->
         <properties-maven-plugin.version>1.0.0</properties-maven-plugin.version> <!--读取properties文件插件 -->
         <maven-pmd-plugin.version>3.8</maven-pmd-plugin.version>
-        <p3c-pmd.version>2.1.1</p3c-pmd.version>
-        <build-helper-maven-plugin.version>3.2.0</build-helper-maven-plugin.version>
-        <maven-build-helper.version>1.1</maven-build-helper.version>
-        <directory-maven-plugin.version>0.3.1</directory-maven-plugin.version>
-        <flyway-maven-plugin.version>6.0.6</flyway-maven-plugin.version>
-        <jacoco.version>0.8.6</jacoco.version>
-        <sonar-maven-plugin.version>3.9.0.2155</sonar-maven-plugin.version>
-
-        <maven-pmd-plugin.version>3.8</maven-pmd-plugin.version>
         <p3c-pmd.version>1.3.6</p3c-pmd.version>
+        <build-helper-maven-plugin.version>3.2.0</build-helper-maven-plugin.version>
+        <maven-build-helper.version>1.2-SNAPSHOT</maven-build-helper.version>
+        <directory-maven-plugin.version>1.0</directory-maven-plugin.version>
+        <flyway-maven-plugin.version>8.2.0</flyway-maven-plugin.version>
+        <jacoco.version>0.8.7</jacoco.version>
+        <sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
 
-        <swagger.version>3.0.0</swagger.version>
-
-        <groovy.version>3.0.8</groovy.version>
+        <groovy.version>3.0.9</groovy.version>
         <okhttp.version>3.14.9</okhttp.version>
         <embedded-consul.verion>2.2.1</embedded-consul.verion>
 
         <antrun-plugin.version>3.0.0</antrun-plugin.version>
-        <docker-maven-plugin.version>0.36.1</docker-maven-plugin.version>
+        <docker-maven-plugin.version>0.38.0</docker-maven-plugin.version>
 
-        <formatter.plugin>2.16.0</formatter.plugin>
+        <formatter.plugin>2.17.1</formatter.plugin>
         <impsort.plugin>1.6.2</impsort.plugin>
         <whitespace.plugin>1.0.4</whitespace.plugin>
         <xml-format.plugin>3.2.0</xml-format.plugin>
@@ -524,6 +522,11 @@
                     </executions>
                 </plugin>
                 <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>${maven-clean-plugin.version}</version>
+                </plugin>
+                <plugin>
                     <artifactId>maven-compiler-plugin</artifactId> <!-- 编译插件 -->
                     <version>${maven-compiler-plugin.version}</version>
                     <configuration>
@@ -548,6 +551,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>${maven-deploy-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>${maven-release-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
