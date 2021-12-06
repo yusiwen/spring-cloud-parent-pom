@@ -33,8 +33,9 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <java.version>1.8</java.version>
+        <build.environment>dev</build.environment>
 
-        <docker.build.name>${project.groupId}.${project.artifactId}:${project.version}</docker.build.name>
+        <docker.build.name>${project.groupId}.${project.artifactId}:${project.version}-${build.environment}</docker.build.name>
         <docker.image.skip>true</docker.image.skip>
 
         <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
@@ -62,8 +63,11 @@
 
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version> <!-- 编译插件 -->
         <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version> <!-- 资源文件处理插件 -->
-        <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
-        <maven-release-plugin.version>3.0.0-M4</maven-release-plugin.version>
+        <maven-source-plugin.version>3.2.1</maven-source-plugin.version> <!-- 源码打包插件 -->
+        <maven-javadoc-plugin.version>3.3.1</maven-javadoc-plugin.version> <!-- 文档打包插件 -->
+        <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version> <!-- 部署插件 -->
+        <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version> <!-- GPG 签名插件 -->
+        <maven-release-plugin.version>3.0.0-M4</maven-release-plugin.version> <!-- 发布插件 -->
         <maven-war-plugin.version>3.2.2</maven-war-plugin.version> <!-- war打包插件 -->
         <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version> <!-- 依赖插件 -->
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version> <!-- clean插件 -->
@@ -549,6 +553,46 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${maven-javadoc-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>attach-javadocs</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven-source-plugin}</version>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <goals>
+                                <goal>jar-no-fork</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                    <version>${maven-gpg-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>sign-artifacts</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>sign</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>${maven-deploy-plugin.version}</version>
                 </plugin>
@@ -838,18 +882,42 @@
             </properties>
         </profile>
         <profile>
-            <id>docker</id>
-            <properties>
-                <docker.image.skip>false</docker.image.skip>
-                <docker.build.name>${project.groupId}.${project.artifactId}:${project.version}-dev</docker.build.name>
-            </properties>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
         <profile>
-            <id>docker-prod</id>
+            <id>docker</id>
+            <activation>
+                <file>
+                    <exists>.docker</exists>
+                </file>
+            </activation>
             <properties>
                 <docker.image.skip>false</docker.image.skip>
-                <docker.build.name>${project.groupId}.${project.artifactId}:${project.version}-prod</docker.build.name>
             </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>io.fabric8</groupId>
+                        <artifactId>docker-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
         <profile>
             <id>format</id>
