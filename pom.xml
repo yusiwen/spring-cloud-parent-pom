@@ -4,7 +4,7 @@
 
     <groupId>cn.yusiwen</groupId>
     <artifactId>spring-cloud-parent-pom</artifactId>
-    <version>1.4-SNAPSHOT</version>
+    <version>4-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>spring-cloud-parent-pom</name>
@@ -22,7 +22,7 @@
         <connection>scm:git:ssh://git@github.com/yusiwen/spring-cloud-parent-pom.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/yusiwen/spring-cloud-parent-pom.git</developerConnection>
         <url>https://github.com/yusiwen/spring-cloud-parent-pom</url>
-        <tag>v1.2</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <developers>
@@ -110,7 +110,7 @@
 
         <formatter.plugin>2.16.0</formatter.plugin>
         <impsort.plugin>1.6.2</impsort.plugin>
-        <whitespace.plugin>1.0.4</whitespace.plugin>
+        <whitespace.plugin>1.0.5</whitespace.plugin>
         <xml-format.plugin>3.2.0</xml-format.plugin>
 
         <javacv.version>1.5.6</javacv.version>
@@ -793,7 +793,7 @@
                     </configuration>
                 </plugin>
                 <plugin>
-                    <groupId>com.github.dantwining.whitespace-maven-plugin</groupId>
+                    <groupId>cn.yusiwen</groupId>
                     <artifactId>whitespace-maven-plugin</artifactId>
                     <version>${whitespace.plugin}</version>
                 </plugin>
@@ -842,15 +842,9 @@
                                 </pluginExecution>
                                 <pluginExecution>
                                     <pluginExecutionFilter>
-                                        <groupId>
-                                            com.github.spotbugs
-                                        </groupId>
-                                        <artifactId>
-                                            spotbugs-maven-plugin
-                                        </artifactId>
-                                        <versionRange>
-                                            [4.3.0,)
-                                        </versionRange>
+                                        <groupId>com.github.spotbugs</groupId>
+                                        <artifactId>spotbugs-maven-plugin</artifactId>
+                                        <versionRange>[4.3.0,)</versionRange>
                                         <goals>
                                             <goal>check</goal>
                                         </goals>
@@ -861,15 +855,9 @@
                                 </pluginExecution>
                                 <pluginExecution>
                                     <pluginExecutionFilter>
-                                        <groupId>
-                                            com.github.dantwining.whitespace-maven-plugin
-                                        </groupId>
-                                        <artifactId>
-                                            whitespace-maven-plugin
-                                        </artifactId>
-                                        <versionRange>
-                                            [1.0.4,)
-                                        </versionRange>
+                                        <groupId>cn.yusiwen</groupId>
+                                        <artifactId>whitespace-maven-plugin</artifactId>
+                                        <versionRange>[1.0.5,)</versionRange>
                                         <goals>
                                             <goal>trim</goal>
                                         </goals>
