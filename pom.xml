@@ -9,6 +9,7 @@
 
     <name>spring-cloud-parent-pom</name>
     <description>Generic Parent POM for Spring Cloud Projects</description>
+    <url>https://github.com/yusiwen/spring-cloud-parent-pom</url>
 
     <licenses>
         <license>
