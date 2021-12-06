@@ -25,6 +25,15 @@
         <tag>v1.2</tag>
     </scm>
 
+    <developers>
+        <developer>
+            <id>yusiwen</id>
+            <name>Siwen Yu</name>
+            <email>yusiwen@gmail.com</email>
+        </developer>
+    </developers>
+
+
     <issueManagement>
         <system>Github</system>
         <url>https://github.com/yusiwen/spring-cloud-parent-pom/issues</url>
