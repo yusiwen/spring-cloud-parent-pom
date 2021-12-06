@@ -4,7 +4,7 @@
 
     <groupId>cn.yusiwen</groupId>
     <artifactId>spring-cloud-parent-pom</artifactId>
-    <version>1.3-SNAPSHOT</version>
+    <version>1.3</version>
     <packaging>pom</packaging>
 
     <name>spring-cloud-parent-pom</name>
@@ -22,7 +22,7 @@
         <connection>scm:git:ssh://git@github.com/yusiwen/spring-cloud-parent-pom.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/yusiwen/spring-cloud-parent-pom.git</developerConnection>
         <url>https://github.com/yusiwen/spring-cloud-parent-pom</url>
-        <tag>v1.2</tag>
+        <tag>v1.3</tag>
     </scm>
 
     <developers>
