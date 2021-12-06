@@ -902,11 +902,6 @@
         </profile>
         <profile>
             <id>docker</id>
-            <activation>
-                <file>
-                    <exists>.docker</exists>
-                </file>
-            </activation>
             <properties>
                 <docker.image.skip>false</docker.image.skip>
             </properties>
