@@ -72,6 +72,7 @@
         <mybatis-plus-generator.version>3.5.1</mybatis-plus-generator.version>
         <freemarker.version>2.3.31</freemarker.version>
 
+        <log4j2.version>2.15.0</log4j2.version> <!-- Patch for CVE-2021-44228 -->
         <hutool.version>5.7.16</hutool.version>
         <lombok.version>1.18.22</lombok.version>
         <swagger.version>3.0.0</swagger.version>
@@ -282,6 +283,17 @@
                 <groupId>com.networknt</groupId>
                 <artifactId>json-schema-validator</artifactId>
                 <version>${json-schema-validator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-to-slf4j</artifactId>
+                <version>${log4j2.version}</version>
             </dependency>
 
             <dependency>
