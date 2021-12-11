@@ -103,7 +103,7 @@
         <sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
 
         <groovy.version>3.0.9</groovy.version>
-        <okhttp.version>3.14.9</okhttp.version>
+        <okhttp.version>4.9.3</okhttp.version>
         <embedded-consul.verion>2.2.1</embedded-consul.verion>
 
         <antrun-plugin.version>3.0.0</antrun-plugin.version>
