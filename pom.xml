@@ -62,7 +62,7 @@
         <nimbus.version>8.23</nimbus.version>
         <java.websocket.version>1.5.2</java.websocket.version>
 
-        <jetcache.version>2.5.16</jetcache.version>
+        <jetcache.version>2.6.2</jetcache.version>
         <fastjson.version>1.2.78</fastjson.version>
         <json-schema-validator.version>1.0.64</json-schema-validator.version>
 
