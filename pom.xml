@@ -114,7 +114,7 @@
         <whitespace.plugin>1.0.5</whitespace.plugin>
         <xml-format.plugin>3.2.0</xml-format.plugin>
 
-        <javacv.version>1.5.6</javacv.version>
+        <javacv.version>1.5.7</javacv.version>
         <ffmpeg-platform.version>4.4-1.5.6</ffmpeg-platform.version>
         <poi.version>4.1.2</poi.version>
     </properties>
