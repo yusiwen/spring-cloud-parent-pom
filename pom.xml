@@ -107,7 +107,7 @@
         <embedded-consul.verion>2.2.1</embedded-consul.verion>
 
         <antrun-plugin.version>3.0.0</antrun-plugin.version>
-        <docker-maven-plugin.version>0.38.0</docker-maven-plugin.version>
+        <docker-maven-plugin.version>0.39.1</docker-maven-plugin.version>
 
         <formatter.plugin>2.16.0</formatter.plugin>
         <impsort.plugin>1.6.2</impsort.plugin>
