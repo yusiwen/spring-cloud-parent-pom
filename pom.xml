@@ -63,7 +63,7 @@
         <java.websocket.version>1.5.2</java.websocket.version>
 
         <jetcache.version>2.5.16</jetcache.version>
-        <fastjson.version>1.2.78</fastjson.version>
+        <fastjson.version>1.2.80</fastjson.version>
         <json-schema-validator.version>1.0.64</json-schema-validator.version>
 
         <mysql-connector.version>8.0.27</mysql-connector.version>
