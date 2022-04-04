@@ -57,7 +57,7 @@
         <spring-boot.version>2.3.12.RELEASE</spring-boot.version>
         <spring-cloud.alibaba.version>2.2.7.RELEASE</spring-cloud.alibaba.version>
         <openfeign-dependencies.version>2.2.7.RELEASE</openfeign-dependencies.version>
-        <spring-boot-admin.version>2.3.1</spring-boot-admin.version>
+        <spring-boot-admin.version>2.6.4</spring-boot-admin.version>
         <jasypt.version>3.0.4</jasypt.version>
         <nimbus.version>8.23</nimbus.version>
         <java.websocket.version>1.5.2</java.websocket.version>
