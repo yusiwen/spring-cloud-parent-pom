@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>spring-cloud-parent-pom</artifactId>
-    <version>9-SNAPSHOT</version>
+    <version>9</version>
     <packaging>pom</packaging>
 
     <name>spring-cloud-parent-pom</name>
@@ -28,7 +28,7 @@
         <connection>scm:git:ssh://git@github.com/yusiwen/spring-cloud-parent-pom.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/yusiwen/spring-cloud-parent-pom.git</developerConnection>
         <url>https://github.com/yusiwen/spring-cloud-parent-pom</url>
-        <tag>HEAD</tag>
+        <tag>v9</tag>
     </scm>
 
     <developers>
